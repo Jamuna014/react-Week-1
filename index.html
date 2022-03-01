@@ -1,0 +1,33 @@
+<script>
+    
+
+function words(){
+var para="My favourite food is Biryani. It is a dish that is popular worldwide, and it takes time and practice to make it. It is prepared with basmati rice mixed with various spices like clove, bay leaves, cardamom, and vegetables. The main components of Biryani are basmati rice, vegetables, and spices. Biryani can be made both with or without meat. It is the layers of spices and vegetables that give Biryani its complex flavour, and these spices can be used both as a whole or as ground. In Biryani, we also use herbs and seeds. Also, the dish is sometimes topped with fresh herbs, caramelized onion, or dried fruits. My favourite food is vegetable Biryani due to its aroma and spices. Lucknow biryani is one of my favourite types of Biryani."
+
+para=para.replace(/,/g,"");
+para=para.replace(/\./g,"");
+para=para.toLowerCase(para);
+//console.log(para);//this code is used to view the varibale text after the following changes
+
+let word = para.split(" ");//here we spliting the space in the words and storing it in the variable named Words
+console.log(`Total words: ${word.length}`);//to view the changes
+
+const count = {};//creating the empty object
+
+for(let item of word)//using for of to filter the reapted words and assinging to the empty array
+  {
+    if (count[item] == null) count[item] = 1;
+    else {
+      count[item] += 1;
+    }
+  };
+
+console.log(count);//to view the output
+
+}
+words();
+
+
+    </script>
+</body>
+</html>
